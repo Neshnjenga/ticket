@@ -24,3 +24,7 @@ Route::get('/otp',[UserController::class,'otp'])->name('otp');
 Route::post('/otppost',[UserController::class,'otppost'])->name('otppost');
 
 Route::get('/resend',[UserController::class,'resend'])->name('resend');
+
+Route::get('/home',[UserController::class,'home'])->name('home');
+
+Route::get('/logout',[UserController::class,'logout'])->name('logout');

@@ -92,7 +92,7 @@ class UserController extends Controller
         if($emailExist){
             if(Hash::check($request->password,$emailExist->password)){
                 auth()->login($emailExist);
-                if($emailExist->isVerified==1){
+                if($emailExist->isVerified == 1){
                     return redirect(route('home'));
                 }
                 else{
@@ -106,5 +106,13 @@ class UserController extends Controller
         else{
             return redirect()->back()->with('error','Incorrect email');
         }
+    }
+    public function logout(){
+        auth()->logout();
+        return redirect(route('home'));
+    }
+
+    public function home(){
+        return view('user.home');
     }
 }

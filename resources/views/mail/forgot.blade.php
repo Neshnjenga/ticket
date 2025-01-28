@@ -3,7 +3,7 @@
 
 The body of your message.
 
-<x-mail::button :url="reset,['token'=>$token]">
+<x-mail::button :url="route('reset',['token'=>$token])">
 Reset password 
 </x-mail::button>
 

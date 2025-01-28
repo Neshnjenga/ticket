@@ -35,7 +35,7 @@
     </style>
 </head>
 <body>
-    <form action="{{route('registerpost')}}" method="post">
+    <form action="{{route('loginpost')}}" method="post">
         <h3>Register</h3>
         @csrf
         @if ($errors->any())
@@ -67,16 +67,16 @@
     <script>
         const ShowPasswordCheckbox =document.getElementById('ShowPassword');
         const passwordInput =document.getElementById('password');
-        const passwordsInput =document.getElementById('passwords');
+        
 
         ShowPasswordCheckbox.addEventListener('change',function(){
             if(ShowPasswordCheckbox.checked){
                 passwordInput.type = 'text';
-                passwordsInput.type = 'text';
+               
             }
             else{
                 passwordInput.type ='password';
-                passwordsInput.type = 'password';
+                
             }
         });
     </script>

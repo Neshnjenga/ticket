@@ -53,10 +53,10 @@
         <input type="text" name="otp" placeholder="Enter your otp">
         <button type="submit" class="btn btn-outline-primary">Sign up</button>
         <p id="timer"></p>
-        <a href="" id="Resend" style="display:none;">Resend link</a>
+        <p id="resend" style="display:none;"><a href="{{route('resend')}}" >Resend link</a></p>
     </form>
     <script>
-        var remainingTime = {{remainingTime}};
+        var remainingTime = {{$remainingTime}};
 
         function startOtpCountdown(){
             var timer =document.getElementById('timer');
@@ -73,7 +73,7 @@
                 else{
                     remainingTime--;
                 }
-            },1000)
+            },1000);
         }
         window.onload =function(){
             if(remainingTime>0){
