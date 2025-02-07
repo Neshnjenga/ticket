@@ -2,24 +2,61 @@
     background-color: lightseagreen;
     color: white;
     padding: 20px;
-    text-align: center;
-    position: absolute;
-    top: -1;
-    width: 100%;
-    z-index: 1000; 
-    margin-bottom: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+
 }
-.navbar .navs a{
+.logo h3:hover{
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+    transition: all ease-in 0.5s;
+    padding: 10px;
+}
+.navs a{
     text-decoration: none;
     padding: 10px;
     color: white;
     margin-left: 10px;
 }
-
-.navbar .navs a:hover{
+.navs a:hover{
     background-color: white;
     color: blue;
     border-radius: 5px;
     text-align: center;
-    transition: all ease-in 0.3s;
+    transition: all ease-in 0.5s;
+}
+.ac a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+}
+.ac a:hover{
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+    transition: all ease-in 0.5s;
+}
+
+form{
+    margin: 50px auto;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    border: 3px dotted;
+    border-color: lightseagreen;
+
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+label{
+    color: red;
+    width: 100%;
 }
